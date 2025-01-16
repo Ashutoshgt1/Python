@@ -1,0 +1,22 @@
+<!-- 1.give key code for the key pressed 
+ 2.script should give message vowel is pressed and it's askey value
+ 3.if other than vowel is key is pressed only show it's askey value-->
+ <html>
+    <head>
+        <script>
+            function fun(e){
+                var ch = e.key;
+                if(ch == 'a' || ch == 'e' || ch == 'i' ||ch == 'o' || ch == 'u'){
+                    alert("Vowel is pressed and it's askey value is " + e.keyCode);
+                }
+                else{
+                    alert("Key pressed is " + e.keyCode);
+                }
+            }
+              
+        </script>
+    </head>
+    <body onkeypress="fun(event)">
+        Enter any alphabet or vowel
+    </body>
+</html>

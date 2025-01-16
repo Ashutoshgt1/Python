@@ -1,0 +1,27 @@
+<!-- it checks whether there is abc anywher in the whole input text
+        [^abc] not abc everything else only abc
+        /abc/ atleast one occurence of abc
+        /[0-9]/,/[^0-9]/
+        (tea|coffee)
+        /bo*/ o's occurrence 0 or more means occurrence not needed of O but occurrence of b is required
+        /t$/ word should end with t
+        /\d/ atleast one digit
+        /\D/ atleast one non digit -->
+        
+<html>
+    <head>
+        <script>
+            function fun(){
+                pat=/\D/;
+                u=document.getElementById("t1").value
+                if(pat.test(u)){
+                    alert("PERFECT")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" name="" id="t1">
+        <input type="submit" onclick="fun()">
+    </body>
+</html>

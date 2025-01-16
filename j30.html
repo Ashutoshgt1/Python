@@ -1,0 +1,33 @@
+<!-- to handle following mouse events
+ 1.if mouse is over heading ,it should turn yellow, if mouse goes out then it should turn black.
+ 2.if find time button is clicked then show date and time information 
+ 3.if button name red is clicked then background color should turn red and button named green is clicked then background color should turn to green -->
+ <html>
+    <head>
+        <script>
+            function fun(id){
+                id.style.color="yellow"
+            }
+            function fun1(id){
+                id.style.color="black"
+            }
+            function fun3(id){
+                d=new Date();
+                document.getElementById("demo").innerHTML=d;
+            }
+            function fun4(){
+                document.getElementById("bd").bgColor="red"
+            }
+            function fun5(){
+                document.getElementById("bd").bgColor="green"
+            }
+        </script>
+    </head>
+    <body id="bd">
+        <h1 onmouseover="fun(this)" onmouseout="fun1(this)">heading</h1>
+        <input type="submit" value="Find time" onclick="fun3(this)">
+        <p id="demo"></p>
+        <input type="submit" value="red" onclick="fun4(this)">
+        <input type="submit" value="green" onclick="fun5(this)">
+    </body>
+ </html>
